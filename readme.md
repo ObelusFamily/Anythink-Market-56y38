@@ -12,8 +12,8 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 1. Install docker
 2. Install docker-composer
-3. Verify docker is installed with the following command: docker -v
-3. Verify docker-compose is installed with the following command: docker-compose -v
+3. Verify docker is installed with the following command: `docker -v`
+3. Verify docker-compose is installed with the following command: `docker-compose -v`
 4. Step into the root folder of the project
-5. Start environment with the the following command: docker-compose up
+5. Start environment with the the following command: `docker-compose up`
 6. Verify environment is up&running. Open in browser : http://localhost:3000/api/ping
