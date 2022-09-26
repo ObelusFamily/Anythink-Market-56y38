@@ -38,6 +38,11 @@ class Item extends React.Component {
       return null;
     }
 
+    // If imgSrc is null then set default placeholder
+    if (!this.props.item.image) {
+      this.props.item.image = "/placeholder.png";
+    }
+
     const markup = {
       __html: marked(this.props.item.description, { sanitize: true }),
     };
