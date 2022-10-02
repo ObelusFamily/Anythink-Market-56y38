@@ -4,6 +4,10 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
+RUN apt update
+RUN apt install nodejs npm -y
+RUN ln -s /usr/bin/node /usr/local/bin/node
+RUN node --version
 RUN pip install poetry==1.2.0
 
 ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /wait-for-it.sh

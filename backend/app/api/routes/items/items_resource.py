@@ -85,6 +85,8 @@ async def create_new_item(
 async def retrieve_item_by_slug(
     item: Item = Depends(get_item_by_slug_from_path),
 ) -> ItemInResponse:
+    if(len(item.image) == 0):
+        item.image = "/placeholder.png" 
     return ItemInResponse(item=ItemForResponse.from_orm(item))
 
 
