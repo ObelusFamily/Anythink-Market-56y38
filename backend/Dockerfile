@@ -6,6 +6,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN apt update
 RUN apt install nodejs npm -y
+RUN ln -s /usr/bin/node /usr/local/bin/node
 RUN node --version
 RUN pip install poetry==1.2.0
 
